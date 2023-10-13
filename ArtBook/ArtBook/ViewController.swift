@@ -120,46 +120,61 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
     
-    
-//    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-//        if editingStyle == .delete {
-//            
-//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//            let context = appDelegate.persistentContainer.viewContext
-//            
-//            let  fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Artist")
-//            
-//            let idString = idArray[indexPath.row].uuidString
-//            
-//            fetchRequest.predicate = NSPredicate(format: "id = %@", idString)
-//            
-//            fetchRequest.returnsObjectsAsFaults = false
-//            
-//            do {
-//                let results = try context.fetch(fetchRequest)
-//                
-//                if results.count > 0 {
-//                    for result in results as! [NSManagedObject] {
-//                        
-//                        if let id = result.value(forKey: "id") as? UUID {
-//                            if id == idArray[indexPath.row] {
-//                                context.delete(result)
-//                                nameArray.remove(at: indexPath.row)
-//                                idArray.remove(at: indexPath.row)
-//                                tableView.reloadData()
-//                            }
-//                        }
-//                        
-//                    }
-//                }
-//                
-//                
-//            } catch {
-//                print("Errol")
-//            }
-//        }
-//    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete {
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            
+            let  fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Artist")
+            
+            let idString = idArray[indexPath.row].uuidString
+            
+            fetchRequest.predicate = NSPredicate(format: "id = %@", idString)
+            
+            fetchRequest.returnsObjectsAsFaults = false
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                
+                if results.count > 0 {
+                    for result in results as! [NSManagedObject] {
+                        
+                        if let id = result.value(forKey: "id") as? UUID {
+                            if id == idArray[indexPath.row] {
+                                context.delete(result)
+                                nameArray.remove(at: indexPath.row)
+                                idArray.remove(at: indexPath.row)
+                                self.tabelView.reloadData()
+                                
+                                do {
+                                    
+                                    try context.save()
+                                    
+                                } catch {
+                                    
+                                    print("Errol")
+                                    
+                                }
+                                
+                                break
+                            }
+                        }
+                        
+                    }
+                }
+                
+                
+            } catch {
+                print("Errol")
+            }
+        }
+    }
 
+//    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+//        <#code#>
+//    }
     
 }
     

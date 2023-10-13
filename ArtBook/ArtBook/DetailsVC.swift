@@ -19,6 +19,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
     
     @IBOutlet weak var yearText: UITextField!
     
+    @IBOutlet weak var saveButton: UIButton!
     
     var chosenArtist : String?
     var chosenArtistID : UUID?
@@ -27,6 +28,8 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
     override func viewDidLoad() {
         
         if chosenArtist != "" {
+            
+            saveButton.isHidden = true
             
             let appDelegate = UIApplication.shared.delegate as? AppDelegate
             let context = appDelegate?.persistentContainer.viewContext
