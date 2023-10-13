@@ -17,6 +17,7 @@
 		E67CCD742AD8C79700D3F280 /* ArtBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67CCD732AD8C79700D3F280 /* ArtBookTests.swift */; };
 		E67CCD7E2AD8C79700D3F280 /* ArtBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67CCD7D2AD8C79700D3F280 /* ArtBookUITests.swift */; };
 		E67CCD802AD8C79700D3F280 /* ArtBookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67CCD7F2AD8C79700D3F280 /* ArtBookUITestsLaunchTests.swift */; };
+		E67CCD8D2AD8CB6D00D3F280 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67CCD8C2AD8CB6D00D3F280 /* DetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E67CCD792AD8C79700D3F280 /* ArtBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67CCD7D2AD8C79700D3F280 /* ArtBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtBookUITests.swift; sourceTree = "<group>"; };
 		E67CCD7F2AD8C79700D3F280 /* ArtBookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtBookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E67CCD8C2AD8CB6D00D3F280 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				E67CCD672AD8C79700D3F280 /* LaunchScreen.storyboard */,
 				E67CCD6A2AD8C79700D3F280 /* Info.plist */,
 				E67CCD622AD8C79600D3F280 /* ArtBook.xcdatamodeld */,
+				E67CCD8C2AD8CB6D00D3F280 /* DetailsVC.swift */,
 			);
 			path = ArtBook;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				E67CCD5A2AD8C79600D3F280 /* AppDelegate.swift in Sources */,
 				E67CCD642AD8C79600D3F280 /* ArtBook.xcdatamodeld in Sources */,
 				E67CCD5C2AD8C79600D3F280 /* SceneDelegate.swift in Sources */,
+				E67CCD8D2AD8CB6D00D3F280 /* DetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
