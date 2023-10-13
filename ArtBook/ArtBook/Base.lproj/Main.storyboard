@@ -113,7 +113,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GHu-jl-KDU"/>
                     <connections>
-                        <outlet property="artistTex" destination="WSx-ec-OGQ" id="4hk-Ax-I54"/>
+                        <outlet property="artistText" destination="WSx-ec-OGQ" id="9dt-Zk-XKK"/>
                         <outlet property="imageView" destination="GDs-vk-JRD" id="UR4-ch-pp1"/>
                         <outlet property="nameText" destination="7rf-UE-gVa" id="jsC-vp-yoQ"/>
                         <outlet property="yearText" destination="9e7-qf-e8w" id="za0-tk-mHI"/>
