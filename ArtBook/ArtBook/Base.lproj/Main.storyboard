@@ -48,7 +48,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GDs-vk-JRD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TuyenQuang" translatesAutoresizingMaskIntoConstraints="NO" id="GDs-vk-JRD">
                                 <rect key="frame" x="16" y="196" width="361" height="263"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -87,7 +87,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
-                                    <action selector="saveButtonClicked:" destination="Sha-kz-59a" eventType="touchUpInside" id="mEn-No-yLU"/>
+                                    <action selector="saveClicked:" destination="Sha-kz-59a" eventType="touchUpInside" id="h1G-U9-rMS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -144,6 +144,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="TuyenQuang" width="1600" height="1172"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -10,7 +10,7 @@ import CoreData
 
 
 class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var nameText: UITextField!
@@ -109,6 +109,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.originalImage] as? UIImage
+        saveButton.isEnabled = true
         self.dismiss(animated: true, completion: nil	)
 
     }
@@ -118,7 +119,9 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
     }
     
     
-    @IBAction func saveButtonClicked(_ sender: Any) {
+
+    
+    @IBAction func saveClicked(_ sender: Any) {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -152,7 +155,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         
         self.navigationController?.popViewController(animated: true)
         
+        
     }
     
-   
 }
