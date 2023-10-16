@@ -83,10 +83,10 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
 
         // Do any additional setup after loading the view.
         
-        let gestureRecognizer = UIGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        
-        view.addGestureRecognizer(gestureRecognizer)
-        
+//        let gestureRecognizer = UIGestureRecognizer(target: self, action: #selector(hideKeyboard))
+//        
+//        view.addGestureRecognizer(gestureRecognizer)
+//        
         
         imageView.isUserInteractionEnabled = true
         let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectImage))
@@ -114,12 +114,15 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
 
     }
     
-    @objc func hideKeyboard(){
-        view.endEditing(true)
-    }
+//    @objc func hideKeyboard(){
+//        view.endEditing(true)
+//    }
     
     
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            view.endEditing(true)
+        }
+    
     
     @IBAction func saveClicked(_ sender: Any) {
         
